@@ -1,0 +1,42 @@
+.Container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background: #797474; 
+   /*  border: 2px solid #eb6b09; */
+    box-shadow: 4px 6px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    width: 42vh;
+    height: 60vh;
+    margin: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700; 
+    font-size: 20px;
+    /* border-radius: 20pt; */
+    object-fit: contain;
+}
+
+.Container img {
+
+    max-width: max-content;
+    max-height: max-content;
+    margin-top: 3vh;
+    
+} 
+
+a{
+    text-decoration: none;
+    color: rgb(128, 16, 128);
+}
+a:visited{
+
+    color: rgb(128, 16, 128);
+}
+
+a:hover{
+        background: #3f506d;
+        transition: all 0.4s;
+        color:  #8b4d1d;;
+}

@@ -1,0 +1,39 @@
+
+.main_container{
+    width: 100vw;
+    height: 4vh;
+    background: #232c3a; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;  
+    padding-top: 1vh;
+    padding-bottom: 1vh; 
+    
+}
+
+.main_container a {
+    color: #d66a17;
+    font-size: large;
+}
+
+
+.main_container img{
+     max-height: 6vh; 
+     width: 150px; 
+     display: flex;
+
+}
+
+.logo{
+    width: 33vw;
+    display: flex;
+    align-items: flex-start;
+}
+
+.main_container a:hover{        /* takin .main_container will make a:hover a global style  */
+    text-shadow: 1px 1px 7px rgb(221, 143, 70);
+    transition: all 0.4s;
+}
+ 

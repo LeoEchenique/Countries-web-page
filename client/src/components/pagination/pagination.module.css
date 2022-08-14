@@ -1,0 +1,23 @@
+
+.container ul{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    width: 89vw; 
+    list-style: none;
+ /*  border: 2px solid blue;  */
+    margin: 10vh;
+
+}
+
+.container button {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.container button:hover{
+        background-color: rgb(221, 143, 70);
+        border-color:#232c3a; 
+        color: #232c3a; 
+}

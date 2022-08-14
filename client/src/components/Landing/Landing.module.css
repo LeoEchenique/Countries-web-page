@@ -1,0 +1,72 @@
+
+
+body{
+    background: #393e46; 
+ 
+}
+.main_container{
+    height: 100vh;
+    width: 100vw;
+    background: #222831; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.toHome{
+    background: #d66a17;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700px; 
+    font-size: 24px;
+    box-shadow: 10px 6px 14px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* CSS */
+.button_17 {
+  align-items: center;
+  appearance: none;
+  background-color: rgb(236, 229, 229);
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #222831; 
+  cursor: pointer;  
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  z-index: 0;
+ 
+}
+
+.button_17:hover {
+  background: #3f506d;
+  transition: all 0.6s;
+  color:  #d67d3d;;
+}
+

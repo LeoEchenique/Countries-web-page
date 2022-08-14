@@ -1,0 +1,218 @@
+.div_container{
+    
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input[type=text]{
+   
+  
+    border: none;
+    margin-bottom: 2%;
+    background:#49586e; 
+    color: white; 
+    font-weight: 400;
+    border-radius: 20px;
+    padding: 8px;
+    width: 235px;
+    font-size: 18px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+   
+}
+input[type=text]::placeholder{
+    color:  white; 
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.h1{
+    color: rgb(240, 233, 233); 
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    margin-left: 90px;
+}
+
+.text_area_container{
+     width: 235px;
+     height: 7vh;
+     margin-bottom: 20px;
+     margin-left: 20px;
+     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+     box-sizing: border-box;
+     border: none;
+    border-radius: 12.5px;
+    background:#49586e; 
+      font-size: 16px;
+    overflow: hidden;
+    resize: none;
+    color: white; 
+       font-weight: 500;
+}
+.text_area_container::placeholder{
+    color:  white; 
+    font-size: 16px;
+    font-weight: 500;
+    text-align:center;
+}
+.form_container{
+
+    margin-top: 10vh;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    background: #443f3f; ; 
+    width: 60vw;
+    height: max-content;
+    /* padding-bottom: 200px; */
+}
+
+.box {
+    position: static;
+  }
+  
+  .box select {
+    background:#49586e; 
+    border-radius: 20px;
+    color: white;
+    padding: 8px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    margin-bottom: 2%;
+    
+  }
+  
+
+.countries_choose{
+   /*  border: 2px solid red; */
+    padding-left: 100px;
+}
+  
+.styling{
+    text-align: center;
+}
+
+.label{
+    color: white;
+    /* margin: 10px; */
+   /*   border: 2px solid red ; */
+    display: inline-flex;
+    width: 100px; 
+}
+.labul{
+    margin-bottom: 40px;
+    margin-left: -20px;
+  
+}
+.label_selected{
+    color: white;
+    /* margin: 10px; */
+ /*  border: 2px solid red ;  */
+    display: inline-flex;
+    /* width: 100px;  */
+    
+}
+.container_comments{
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.button_17{
+     
+    align-items: center;
+    appearance: none;
+    background-color: rgb(236, 229, 229);
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #222831; 
+    cursor: pointer;  
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    padding: 8px 8px;
+    margin-bottom: 4vh;
+    margin-left: 90px;
+/*     border: 2px solid red; */
+  }
+  
+  .button_17:hover {
+    background:#d67d3d;
+    transition: all 0.6s;
+  }
+
+  .button_17:checked{
+   background:#d67d3d;
+  }
+
+
+
+  
+.p{
+    color:rgb(231, 57, 57);
+   margin: auto;
+   margin-top: -15px;
+   margin-bottom: 20px;
+   margin-left: 50px;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+
+    width: 100%;
+
+}
+.pre_select{
+    color:white;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+   
+}   
+
+.countries_choice{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+.countries_selected{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+   /*  margin-left: 30%; */
+     max-width: 400px;
+    
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.div_selectedCon{
+    min-width: max-content;
+    max-width: 200px;
+    
+}
+.create_act{
+    margin-bottom: 60px;
+    font-size: 48px;
+}
+
+.texted{
+ 
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.div_err{
+
+}
