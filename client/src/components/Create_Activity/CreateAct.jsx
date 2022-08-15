@@ -12,7 +12,7 @@ export default function CreateAct() {
     
     const dispatch = useDispatch();
     const [countries, setCountries] = useState([]);
-   /*  const [id, setId] = useState(0); */
+
     const [countriesId, setCountriesId] = useState([]);
     const [error, setErrors] = useState("");
     const [form, setForm] = useState({
@@ -67,20 +67,17 @@ export default function CreateAct() {
   
      function handleSubmit(e) {
          e.preventDefault()
-         /* setId(idGen(32)) */
-   /*      setForm(values => ({ ...values, id: idGen(32) })) */
-        
-        
-        /* let success = validator(form, countriesId); */
+       
+        let success = validator(form, countriesId);
       
         
-     /*    if (success === true) {
-            setErrors({})  */
+        if (success === true) {
+            setErrors({}) 
           dispatch(createAct(form, countriesId))
-          /* alert("Activity created! check it out by searching on HOME!") */
+          alert("Activity created! check it out by searching on HOME!")
           /*   window.location = "/home";  */
             /* TODO:  A REDIRECT TO  "ACTIVITIES_ALL" */
-        /* } else setErrors(success)  */       
+        } else setErrors(success)        
     } 
     
     return (
