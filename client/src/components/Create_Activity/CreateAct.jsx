@@ -12,7 +12,7 @@ export default function CreateAct() {
     
     const dispatch = useDispatch();
     const [countries, setCountries] = useState([]);
-    const [id, setId] = useState("");
+    const [id, setId] = useState(0);
     const [countriesId, setCountriesId] = useState([]);
     const [error, setErrors] = useState("");
     const [form, setForm] = useState({
