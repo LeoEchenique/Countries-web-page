@@ -8,12 +8,12 @@ import { validator } from "../../Helpers/validator"
 
 export default function CreateAct() {
     
-    let id= idGen(33);
+    
     
     const dispatch = useDispatch();
     const [countries, setCountries] = useState([]);
+    const [id, setId] = useState("");
     const [countriesId, setCountriesId] = useState([]);
-
     const [error, setErrors] = useState("");
     const [form, setForm] = useState({
         id: id ,
@@ -51,8 +51,9 @@ export default function CreateAct() {
     function handleForm(e) {
         const name = e.name;
         const value = e.value;
-        setForm(values => ({ ...values, [name]: value }))
         
+        setForm(values => ({ ...values, [name]: value }))
+        console.log(form, "form") 
     }
     
     function handleClick(e) {
@@ -65,30 +66,26 @@ export default function CreateAct() {
    
   
      function handleSubmit(e) {
-        e.preventDefault()
-        setForm(values => ({ ...values, id: idGen(28) }))
+         e.preventDefault()
+         setId(idGen(32))
+        setForm(values => ({ ...values, id: id }))
         
         
         let success = validator(form, countriesId);
       
         
         if (success === true) {
-            setErrors({})   
+            setErrors({}) 
           dispatch(createAct(form, countriesId))
-         /*  alert("Activity created! check it out by searching on HOME!")
-            window.location = "/home"; */
-            /* TODO:  UN MODAL QUE REDIRECCIONE A "ACTIVITIES_ALL" */
-        } else setErrors(success)
-        
-      
-        
-        
+          alert("Activity created! check it out by searching on HOME!")
+            window.location = "/home"; 
+            /* TODO:  A REDIRECT TO  "ACTIVITIES_ALL" */
+        } else setErrors(success)        
     } 
     
     return (
     
-        /* MODEL HAS:  id Number - name REQUIRED - level REQUIRED - Duration REQUIRED 
-                        Season REQUIRED -  Comments OPTIONAL - Contact OPTIONAL */
+
         <div className={style.div_container}>
            
             

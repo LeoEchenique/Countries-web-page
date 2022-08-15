@@ -5,7 +5,6 @@ import logo from "../Nav/logo.png"
 
 export default function Nav({onForm}) {
 
-   console.log(onForm, "yazz")
    
    return (
       

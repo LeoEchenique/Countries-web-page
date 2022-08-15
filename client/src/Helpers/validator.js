@@ -2,7 +2,7 @@
 export const validator = (form, keys) => {
     let { comments, contact, duration, id, level, name, season } = form;
     let success = false;
-    console.log(comments, contact, duration, id, level, name, season, "foorm", keys)
+
 
     let err = {
         duration: "Duration is required",
@@ -38,7 +38,6 @@ export const validator = (form, keys) => {
 
     !err.contact && !err.name && !err.duration && !err.season && !err.level && !err.keys ? success = true : success = false
 
-    console.log("validator says", err)
 
     if (success !== true) return err
 

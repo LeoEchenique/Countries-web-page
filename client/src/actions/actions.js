@@ -16,13 +16,13 @@ export const getDetail = (payload) => {
 
     return async function (dispatch) {
         const { data } = await axios.get(`https://countries019.herokuapp.com/Countries/${payload}`);
-        /* console.log(data, "data") */
+
         return dispatch({ type: "getDetail", payload: data });
     };
 }
 
 export const orderCountries = (order, toOrder) => {
-    /*     console.log(order, toOrder, "act") */
+
     return {
         type: "orderBy",
         order,
@@ -59,7 +59,7 @@ export const getSort = (by, order) => {
 
 
 export const getSortFront = (by, order, continent) => {
-    /*   console.log("order:", order, "by:", by, "continent:", continent) */
+
     return {
         type: "SORT_FRONT",
         by,
