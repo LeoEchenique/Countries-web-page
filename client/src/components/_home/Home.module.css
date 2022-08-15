@@ -14,9 +14,7 @@
     height: 4vh;
     display: flex;
     justify-content:center;
-    padding: 10vh;
-
-  
+    padding: 10vh;  
 }
 
 .start_DIVbutton{
@@ -36,7 +34,7 @@
     font-size: 18px;
     color: #3f506d;
      margin-right: 7px; 
-    /* margin-top: 3px; */
+     margin-top: 60px;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
@@ -47,8 +45,15 @@
     color: #0c2042;
   }
 
+.search_by{
+  color: rgb(240, 231, 231);
+  font-size: 32px;
+  margin-top: 80px;
+}
+
+
 .button_17{
-     
+        margin-top: 60px;
         align-items: center;
         appearance: none;
         background-color: rgb(236, 229, 229);

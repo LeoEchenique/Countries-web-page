@@ -1,35 +1,48 @@
 
 .main_container{
     width: 100vw;
-    height: 4vh;
+    /* height: 8vh; */
     background: #232c3a; 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     position: fixed;  
-    padding-top: 1vh;
+ /*    padding-top: 6vh; */
     padding-bottom: 1vh; 
-    
+
+  /*   outline: 2px solid red; */
 }
 
 .main_container a {
     color: #d66a17;
-    font-size: large;
+    font-size: 20px;
+ /*    outline: 2px solid red; */
+    
 }
 
+.nav_link{
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  /*   outline: 2px solid blue; */
+    width: 500px
+}
 
 .main_container img{
-     max-height: 6vh; 
-     width: 150px; 
+    height: 100px;
+     width: 200px; 
      display: flex;
-
-}
+   /*  margin-left: -120px; */
+ 
+}  
 
 .logo{
-    width: 33vw;
+    width: 40vw;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; 
+    object-fit: contain;
 }
 
 .main_container a:hover{        /* takin .main_container will make a:hover a global style  */

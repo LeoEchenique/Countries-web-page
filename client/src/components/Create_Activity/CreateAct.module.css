@@ -62,12 +62,12 @@ input[type=text]::placeholder{
 }
 .form_container{
 
-    margin-top: 10vh;
+    margin-top: 14vh;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     background: #443f3f; ; 
     width: 60vw;
     height: max-content;
-    /* padding-bottom: 200px; */
+
 }
 
 .box {
@@ -213,6 +213,9 @@ input[type=text]::placeholder{
     margin-bottom: 40px;
 }
 
-.div_err{
 
+.errorLoading{
+
+    margin-top: 400px;
+    color: rgb(228, 217, 217);
 }

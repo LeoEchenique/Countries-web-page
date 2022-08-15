@@ -26,17 +26,24 @@
     
 } 
 
-a{
-    text-decoration: none;
-    color: rgb(128, 16, 128);
+.a{
+    text-decoration: none; 
+    color:#633410;;
 }
-a:visited{
+.a:visited{
 
     color: rgb(128, 16, 128);
 }
 
-a:hover{
-        background: #3f506d;
+.a:hover{
+        
         transition: all 0.4s;
-        color:  #8b4d1d;;
+        color: #691f1f;
+}   
+
+.link{
+    text-decoration: none;
+}
+.acts{
+outline: 2px solid red;
 }

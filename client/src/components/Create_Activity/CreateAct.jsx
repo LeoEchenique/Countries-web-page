@@ -64,7 +64,7 @@ export default function CreateAct() {
 
    
   
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
         setForm(values => ({ ...values, id: idGen(28) }))
         
@@ -74,13 +74,15 @@ export default function CreateAct() {
         
         if (success === true) {
             setErrors({})   
-            dispatch(createAct(form, countriesId))
-            
+          dispatch(createAct(form, countriesId))
+         alert("Activity created! check it out by searching on HOME!")
+            window.location = "/home";
+            /* TODO:  UN MODAL QUE REDIRECCIONE A "ACTIVITIES_ALL" */
         } else setErrors(success)
         
       
         
-        alert("Activity created! check it out by searching it!")
+        
     } 
     console.log(error, "error")
     return (
@@ -89,7 +91,8 @@ export default function CreateAct() {
                         Season REQUIRED -  Comments OPTIONAL - Contact OPTIONAL */
         <div className={style.div_container}>
            
-            <div className={style.form_container}>
+            
+                <div className={style.form_container}>
 
             <h1 className={`${style.h1} ${style.create_act}`}>Create activity</h1>
                  <form onSubmit={(e)=> handleSubmit(e)}>
@@ -157,29 +160,32 @@ export default function CreateAct() {
                     <div className={style.div_err}>
                         
                          <label  className={style.label} > Contact: </label>
-                         <input type="text" placeholder="Contact information" onChange={e => handleForm(e.target)} name="contact"></input>
+                         <input type="text" placeholder="Email contact" onChange={e => handleForm(e.target)} name="contact"></input>
 
                         {error?.contact ? <p className={style.p}>{error.contact}</p> : null}
             
                     </div>
-                      
-                <h1 className={`${style.countries_choice} ${style.h1}`}>Choose your countries</h1> 
-            <div className={style.countries_choose} >
-                <div className={style.box}>
-                        <select onChange={(e)=> handleSelect(e)} className={style.styling}>
-                     {actualStorage.length ? 
-                        actualStorage.map(e => {
-                        return(
-                         <>
-                                <option onClick={(e)=>handleClick(e)} id={e.id}>{e.name}</option>
-                         </>
-                      )
-                      })    
-                         : null}
-                        </select>
+                    {actualStorage?.length?
+                        <h1 className={`${style.countries_choice} ${style.h1}`}>Choose your countries</h1> : null}
+                    
+                <div className={style.countries_choose} >
+                        {actualStorage?.length ?
+                            <div className={style.box}>
+                                <select onChange={(e) => handleSelect(e)} className={style.styling}>
+                                    {actualStorage.length ?
+                                        actualStorage.map(e => {
+                                            return (
+                                                <>
+                                                    <option onClick={(e) => handleClick(e)} id={e.id}>{e.name}</option>
+                                                </>
+                                            )
+                                        })
+                                        : null}
+                                </select>
 
-                </div>
-    
+                            </div> : <h1 className={style.pre_select}> Couldn't load the countries, please go back to HOME. </h1>}
+                            
+                      
                 <div onChange={(e)=> handleCheck(e)} className={style.countries_selected} >
                     {countries.length ? 
                         countries.map(e => {
@@ -192,17 +198,18 @@ export default function CreateAct() {
                             )
                         })
                                 : error?.keys ? <p className={`${style.p} ${style.texted}`}>{error.keys} </p>
-                            :
-                        <p className={`${style.pre_select}`}>Selected countries will appear here..</p>}
+                            : actualStorage?.length? 
+                        <p className={`${style.pre_select}`}>Selected countries will appear here..</p> : null}
                         
                 </div>
-            </div>
-                        <button className={style.button_17}> CREATE NOW!</button>
+                    </div>
+                    {actualStorage?.length ?
+                        <button className={style.button_17}> CREATE NOW!</button> : null}
                         
                 </form>
 
 
-            </div>
+            </div> 
            
         </div>
 )
