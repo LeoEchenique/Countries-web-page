@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Sequelize, HasMany, } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-
+/* 
 
 const sequelize = new Sequelize(`${process.env.DATABASE_URL}`, {
   logging: false, // set to console.log to see the raw SQL queries
@@ -12,6 +12,20 @@ const sequelize = new Sequelize(`${process.env.DATABASE_URL}`, {
   dialectOptions: {
     ssl: true
   }
+}); */
+const sequelize = new Sequelize({
+  database: process.env.DATABASE_URL,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOSTNAME,
+  port: 5432,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+    }
+  },
 });
 const basename = path.basename(__filename);
 
