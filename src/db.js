@@ -13,7 +13,7 @@ const sequelize = new Sequelize(`${process.env.DATABASE_URL}`, {
     ssl: true
   }
 }); */
-const database = dfstc2hijmv7nv;
+
 const sequelize = new Sequelize({
   database: process.env.DATABASE,
   username: process.env.DB_USERNAME,
