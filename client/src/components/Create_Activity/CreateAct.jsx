@@ -64,7 +64,7 @@ export default function CreateAct() {
 
    
   
-    async function handleSubmit(e) {
+     function handleSubmit(e) {
         e.preventDefault()
         setForm(values => ({ ...values, id: idGen(28) }))
         
@@ -75,8 +75,8 @@ export default function CreateAct() {
         if (success === true) {
             setErrors({})   
           dispatch(createAct(form, countriesId))
-         alert("Activity created! check it out by searching on HOME!")
-            window.location = "/home";
+         /*  alert("Activity created! check it out by searching on HOME!")
+            window.location = "/home"; */
             /* TODO:  UN MODAL QUE REDIRECCIONE A "ACTIVITIES_ALL" */
         } else setErrors(success)
         
@@ -84,7 +84,7 @@ export default function CreateAct() {
         
         
     } 
-    console.log(error, "error")
+    
     return (
     
         /* MODEL HAS:  id Number - name REQUIRED - level REQUIRED - Duration REQUIRED 
