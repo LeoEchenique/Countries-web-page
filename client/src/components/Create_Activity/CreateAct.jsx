@@ -12,11 +12,11 @@ export default function CreateAct() {
     
     const dispatch = useDispatch();
     const [countries, setCountries] = useState([]);
-    const [id, setId] = useState(0);
+   /*  const [id, setId] = useState(0); */
     const [countriesId, setCountriesId] = useState([]);
     const [error, setErrors] = useState("");
     const [form, setForm] = useState({
-        id: id ,
+        id: 0 ,
         name: "",
         season:"",
         comments: "",
@@ -67,8 +67,8 @@ export default function CreateAct() {
   
      function handleSubmit(e) {
          e.preventDefault()
-         setId(idGen(32))
-        setForm(values => ({ ...values, id: id }))
+         /* setId(idGen(32)) */
+        setForm(values => ({ ...values, id: idGen(32) }))
         
         
         let success = validator(form, countriesId);
