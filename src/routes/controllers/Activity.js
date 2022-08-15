@@ -8,7 +8,7 @@ router.post("/", async (req, res) => {
 
     const { Id, Name, Level, Duration, Season, Comments, Contact, PkCountry } = req.body;
 
-    console.log(PkCountry, Comments, Contact, "pk")
+    let act;
 
     for (let i = 0; i < PkCountry.length; i++) {
 
@@ -26,56 +26,12 @@ router.post("/", async (req, res) => {
                 Comments: Comments ? Comments : undefined,
                 Contact: Contact ? Contact : undefined
             });
+            act = activity;
             await activity.addCountry(country);
 
         }
     }
-    res.status(201).json("done!")
-
-    /* PkCountry.map(async (e) => {
-        const isCreated = await Activity.findByPk(Id)
-        const country = await Country.findByPk(e.id)
-        if (isCreated) {
-            await isCreated.addCountry(country);
-            res.status(200).json(isCreated)
-        } else {
-            const activity = await Activity.create({
-                Id: Id,
-                Name: Name,
-                Season: Season,
-                Level: Level,
-                Duration: Duration,
-                Comments: Comments,
-                Contact: Contact
-            });
-            await activity.addCountry(country);
-            res.status(201).json(activity)
-        }
-    }) */
-
-
-
-
-
-    /*  if (isCreated) {
-         console.log("Enrte", isCreated)
-         await isCreated.addCountry(country);
-         return res.json(isCreated)
-     }
-     const activity = await Activity.create({
-         Id: Id,
-         Name: Name,
-         Season: Season,
-         Level: Level,
-         Duration: Duration,
-         Comments: Comments,
-         Contact: Contact
-     });
- 
- 
- 
-     await activity.addCountry(country);
-     res.status(201).json(activity) */
+    res.status(201).json(isCreated ? isCreated : act)
 })
 
 router.get("/all", async (req, res) => {
