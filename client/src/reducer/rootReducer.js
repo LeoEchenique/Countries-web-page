@@ -44,7 +44,7 @@ function rootReducer(state = initialState, action) {
                     Id: activity.id,
                     Name: activity.name.toUpperCase(),
                     Season: activity.season,
-                    Level: activity.level,
+                    Level: parseInt(activity.level),
                     Duration: activity.duration,
                     Comments: activity.comments.toUpperCase(),
                     Contact: activity.contact,

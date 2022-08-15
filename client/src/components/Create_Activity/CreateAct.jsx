@@ -8,7 +8,7 @@ import { validator } from "../../Helpers/validator"
 
 export default function CreateAct() {
     
-    
+    let id = idGen(32);
     
     const dispatch = useDispatch();
     const [countries, setCountries] = useState([]);
@@ -16,7 +16,7 @@ export default function CreateAct() {
     const [countriesId, setCountriesId] = useState([]);
     const [error, setErrors] = useState("");
     const [form, setForm] = useState({
-        id: 0 ,
+        id: id,
         name: "",
         season:"",
         comments: "",
@@ -68,7 +68,7 @@ export default function CreateAct() {
      function handleSubmit(e) {
          e.preventDefault()
          /* setId(idGen(32)) */
-        setForm(values => ({ ...values, id: idGen(32) }))
+   /*      setForm(values => ({ ...values, id: idGen(32) })) */
         
         
         let success = validator(form, countriesId);
