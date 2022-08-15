@@ -5,7 +5,7 @@ const PORT = process.env.PORT;
 export const getCountries = () => {
 
     return async function (dispatch) {
-        const { data } = await axios.get(`${PORT}/Countries`);
+        const { data } = await axios.get(`https://countries019.herokuapp.com/Countries`);
         return dispatch({ type: "GetAll", payload: data });
     };
 
