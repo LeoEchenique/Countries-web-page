@@ -1,5 +1,6 @@
 import axios from "axios";
 import { idGen } from "../Helpers/idGen";
+const PORT = process.env.PORT;
 
 const initialState = {
 
@@ -38,7 +39,7 @@ function rootReducer(state = initialState, action) {
         let activity = action.payload.form
         console.log(activity, "reducer")
         let result = async (e) => {
-            const { data } = await axios.post(`http://localhost:3001/Activity/`,
+            const { data } = await axios.post(`${PORT}/Activity/`,
                 {
                     Id: activity.id,
                     Name: activity.name.toUpperCase(),
