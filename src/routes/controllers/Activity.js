@@ -16,6 +16,7 @@ router.post("/", async (req, res) => {
         const country = await Country.findByPk(PkCountry[i].id)
         if (isCreated) {
             await isCreated.addCountry(country);
+            act = isCreated;
         } else {
             const activity = await Activity.create({
                 Id: Id,
@@ -31,7 +32,7 @@ router.post("/", async (req, res) => {
 
         }
     }
-    res.status(201).json(isCreated ? isCreated : act)
+    res.status(201).json(act)
 })
 
 router.get("/all", async (req, res) => {
