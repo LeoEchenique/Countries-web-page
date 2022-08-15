@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route path="/home/" element={[<Nav />, <Home />]} />  {/* renderizas más de un componente en una misma ruta, con arr */}
-        <Route exact path="/home/detail/:id" element={<Detail />} />
+        <Route exact path="/home/detail/:id" element={[<Nav onForm={true} />, <Detail />]} />
         <Route exact path="/home/CreateYourOwn" element={[<Nav onForm={true} />, <CreateAct />]} />
       </Routes>
 
