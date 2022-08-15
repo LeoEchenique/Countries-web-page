@@ -19,7 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-import fetch from 'node-fetch';
+const axios = require('axios')
 const { Country } = require("./src/db.js")
 // Syncing all the models at once.  
 const PORT = process.env.PORT || 3001;
@@ -30,7 +30,7 @@ conn.sync({ force: true }).then(() => {
 
     const result2 = await Country.findAll();
     if (!result2.length) {
-      const alterCountries = await fetch('https://restcountries.com/v3/all');
+      const alterCountries = await axios.get('https://restcountries.com/v3/all');
       alterCountries.data.map(async (e) => {
         if (e.flags.png === undefined) e.flags.png = "Not avaiable"
         if (e.capital === undefined) e.capital = "This country don't have a Capital!";
