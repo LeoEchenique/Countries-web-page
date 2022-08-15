@@ -19,7 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 const { Country } = require("./src/db.js")
 // Syncing all the models at once.  
 const PORT = process.env.PORT || 3001;
