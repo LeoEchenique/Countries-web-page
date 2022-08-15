@@ -15,7 +15,7 @@ export const getCountries = () => {
 export const getDetail = (payload) => {
 
     return async function (dispatch) {
-        const { data } = await axios.get(`${PORT}/Countries/${payload}`);
+        const { data } = await axios.get(`https://countries019.herokuapp.com/Countries/${payload}`);
         /* console.log(data, "data") */
         return dispatch({ type: "getDetail", payload: data });
     };
@@ -51,7 +51,7 @@ export const getSort = (by, order) => {
 
     return async function (dispatch) {
 
-        const { data } = await axios.get(`${PORT}/Countries/sort/${by}/${order}`);
+        const { data } = await axios.get(`https://countries019.herokuapp.com/Countries/sort/${by}/${order}`);
 
         return dispatch({ type: "getSort", payload: data });
     };
@@ -78,7 +78,7 @@ export const getNames = () => {
 export const getActivities = () => {
 
     return async function (dispatch) {
-        const { data } = await axios.get(`${PORT}/Activity/all`);
+        const { data } = await axios.get(`https://countries019.herokuapp.com/Activity/all`);
         return dispatch({ type: "GET_ACTIVITIES", payload: data });
     };
 

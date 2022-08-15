@@ -39,7 +39,7 @@ function rootReducer(state = initialState, action) {
         let activity = action.payload.form
         console.log(activity, "reducer")
         let result = async (e) => {
-            const { data } = await axios.post(`${PORT}/Activity/`,
+            const { data } = await axios.post(`https://countries019.herokuapp.com/Activity/`,
                 {
                     Id: activity.id,
                     Name: activity.name.toUpperCase(),
