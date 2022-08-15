@@ -78,7 +78,7 @@ export default function CreateAct() {
             setErrors({}) 
           dispatch(createAct(form, countriesId))
           alert("Activity created! check it out by searching on HOME!")
-            window.location = "/home"; 
+          /*   window.location = "/home";  */
             /* TODO:  A REDIRECT TO  "ACTIVITIES_ALL" */
         } else setErrors(success)        
     } 
