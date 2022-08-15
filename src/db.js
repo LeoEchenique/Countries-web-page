@@ -15,7 +15,7 @@ const sequelize = new Sequelize(`${process.env.DATABASE_URL}`, {
 }); */
 const database = dfstc2hijmv7nv;
 const sequelize = new Sequelize({
-  database: database,
+  database: process.env.DATABASE,
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   host: process.env.DB_HOSTNAME,
