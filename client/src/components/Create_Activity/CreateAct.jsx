@@ -53,7 +53,7 @@ export default function CreateAct() {
         const value = e.value;
         
         setForm(values => ({ ...values, [name]: value }))
-        console.log(form, "form") 
+         
     }
     
     function handleClick(e) {
@@ -64,22 +64,23 @@ export default function CreateAct() {
     }
 
    
-  
-     function handleSubmit(e) {
+
+
+
+      function handleSubmit(e) {
          e.preventDefault()
-       
         let success = validator(form, countriesId);
-      
-        
         if (success === true) {
-            setErrors({}) 
-          dispatch(createAct(form, countriesId))
-          alert("Activity created! check it out by searching on HOME!")
-          /*   window.location = "/home";  */
-            /* TODO:  A REDIRECT TO  "ACTIVITIES_ALL" */
-        } else setErrors(success)        
+            setErrors({})   
+            dispatch(createAct(form, countriesId))       
+            window.location = "/home";
+         
+        } else setErrors(success)
+        
     } 
-    
+      
+     
+
     return (
     
 
