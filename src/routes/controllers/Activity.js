@@ -8,7 +8,10 @@ router.post("/", async (req, res) => {
 
     const { Id, Name, Level, Duration, Season, Comments, Contact, PkCountry } = req.body;
 
+<<<<<<< HEAD:api/src/routes/controllers/Activity.js
+=======
     let act;
+>>>>>>> b4664cbdb68ee6e445676708c5ba26cd0384e91c:src/routes/controllers/Activity.js
 
     for (let i = 0; i < PkCountry.length; i++) {
 
