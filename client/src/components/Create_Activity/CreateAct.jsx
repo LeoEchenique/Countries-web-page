@@ -53,7 +53,7 @@ export default function CreateAct() {
         const value = e.value;
         
         setForm(values => ({ ...values, [name]: value }))
-        console.log(form, "form") 
+   
     }
     
     function handleClick(e) {
