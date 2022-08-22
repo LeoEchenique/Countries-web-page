@@ -8,7 +8,6 @@ router.post("/", async (req, res) => {
 
     const { Id, Name, Level, Duration, Season, Comments, Contact, PkCountry } = req.body;
 
-    console.log(PkCountry, Comments, Contact, "pk")
 
     for (let i = 0; i < PkCountry.length; i++) {
 

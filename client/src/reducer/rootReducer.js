@@ -36,7 +36,7 @@ function rootReducer(state = initialState, action) {
     }
     if (action.type === "CREATE_ACTIVITY") {
         let activity = action.payload.form
-        console.log(activity, "reducer")
+        /*  console.log(activity, "reducer") */
         let result = async (e) => {
             const { data } = await axios.post(`http://localhost:3001/Activity/`,
                 {

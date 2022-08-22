@@ -112,7 +112,7 @@ export default function Home() {
              
            
                <div className={style.Select_filter}>
-                  <h2>Search by:</h2>
+                  <h2 className={style.search_by}>Search by:</h2>
                   <div className={style.box}>
                   <select onChange={(e) => handleChange(e.target.value)} className={style.styling}>
                         <option defaultValue id="all">All</option>
