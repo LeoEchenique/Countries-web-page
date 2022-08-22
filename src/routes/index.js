@@ -12,7 +12,7 @@ router.use("/Countries", Country);
 router.use("/Activity", Activity);
 
 router.get('/', (req, res) => {
-    res.send('Leo');
+    res.send('Henry');
 });
 
 module.exports = router;
