@@ -5,7 +5,7 @@
     align-items: center;
     justify-content:center;
     background: #797474; 
-   /*  border: 2px solid #eb6b09; */
+  /*  border: 2px solid #eb6b09;  */
     box-shadow: 4px 6px 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 5%;
     width: 42vh;
@@ -16,14 +16,17 @@
     font-size: 20px;
     /* border-radius: 20pt; */
     object-fit: contain;
+    padding: 40px;
+
 }
 
 .Container img {
 
-    max-width: max-content;
+    max-width: 350px;
     max-height: max-content;
     margin-top: 3vh;
-    
+    /* outline: 2px solid red; */
+
 } 
 
 .a{

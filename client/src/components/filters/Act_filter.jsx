@@ -13,7 +13,7 @@ export default function FilterAct({setter}) {
     
     function handleChange(e) {
         setter()
-      /*   console.log(e) */
+  
         dispatch(orderCountries("Season", e))
     }
 

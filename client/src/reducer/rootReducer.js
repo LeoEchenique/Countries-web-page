@@ -1,5 +1,6 @@
 import axios from "axios";
 import { idGen } from "../Helpers/idGen";
+const PORT = process.env.PORT;
 
 const initialState = {
 
@@ -36,14 +37,14 @@ function rootReducer(state = initialState, action) {
     }
     if (action.type === "CREATE_ACTIVITY") {
         let activity = action.payload.form
-        /*  console.log(activity, "reducer") */
+
         let result = async (e) => {
-            const { data } = await axios.post(`http://localhost:3001/Activity/`,
+            const { data } = await axios.post(`https://countries019.herokuapp.com/Activity/`,
                 {
                     Id: activity.id,
                     Name: activity.name.toUpperCase(),
                     Season: activity.season,
-                    Level: activity.level,
+                    Level: parseInt(activity.level),
                     Duration: activity.duration,
                     Comments: activity.comments.toUpperCase(),
                     Contact: activity.contact,

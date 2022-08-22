@@ -18,8 +18,7 @@ export default function Detail(props) {
   
      // eslint-disable-next-line react-hooks/exhaustive-deps
      },[] )
-   /*  const { id } = props.match.params;
-    console.log(id) */
+
 
     const actualStorage = useSelector(state => state.countryDetail);
     let detail = actualStorage;

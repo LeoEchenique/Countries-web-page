@@ -8,15 +8,15 @@ import { validator } from "../../Helpers/validator"
 
 export default function CreateAct() {
     
-    let id= idGen(33);
+    let id = idGen(32);
     
     const dispatch = useDispatch();
     const [countries, setCountries] = useState([]);
-    const [countriesId, setCountriesId] = useState([]);
 
+    const [countriesId, setCountriesId] = useState([]);
     const [error, setErrors] = useState("");
     const [form, setForm] = useState({
-        id: id ,
+        id: id,
         name: "",
         season:"",
         comments: "",
@@ -51,8 +51,9 @@ export default function CreateAct() {
     function handleForm(e) {
         const name = e.name;
         const value = e.value;
-        setForm(values => ({ ...values, [name]: value }))
         
+        setForm(values => ({ ...values, [name]: value }))
+         
     }
     
     function handleClick(e) {
@@ -63,34 +64,26 @@ export default function CreateAct() {
     }
 
    
-  
-    async function handleSubmit(e) {
-        e.preventDefault()
-        setForm(values => ({ ...values, id: idGen(28) }))
-        
-        
+
+
+
+      function handleSubmit(e) {
+         e.preventDefault()
         let success = validator(form, countriesId);
-      
-        
         if (success === true) {
             setErrors({})   
-          await  dispatch(createAct(form, countriesId))
-/*             alert("Activity created! check it out by searching on HOME!")
- */
-            
+            dispatch(createAct(form, countriesId))       
             window.location = "/home";
-            /* TODO:  UN MODAL QUE REDIRECCIONE A "ACTIVITIES_ALL" */
+         
         } else setErrors(success)
         
-      
-        
-        
     } 
- 
+      
+     
+
     return (
     
-        /* MODEL HAS:  id Number - name REQUIRED - level REQUIRED - Duration REQUIRED 
-                        Season REQUIRED -  Comments OPTIONAL - Contact OPTIONAL */
+
         <div className={style.div_container}>
            
             

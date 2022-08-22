@@ -69,6 +69,7 @@ export default function Home() {
 
    function paginate(num) {
       setCurrentPage(num)
+      window.scroll(0,0)
    }
 
    function setter() {
