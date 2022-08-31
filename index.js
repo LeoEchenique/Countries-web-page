@@ -25,7 +25,7 @@ const { Country } = require("./src/db.js")
 const PORT = process.env.PORT || 3001;
 
 
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(PORT, async () => {
 
     const result2 = await Country.findAll();
