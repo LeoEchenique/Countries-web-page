@@ -53,3 +53,8 @@
   .box select option {
     padding: 30px;
   }
+
+  .searchBy{
+      color: rgb(240, 231, 231);
+      font-size: 32px;
+  }

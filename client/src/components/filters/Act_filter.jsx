@@ -22,7 +22,7 @@ export default function FilterAct({setter}) {
            
            
                 <div>
-                     <h2> Order by: </h2> 
+                     <h2 className={style.orderBy}> Order by: </h2> 
                 <div onChange={(e) => handleChange(e.target.value)}>
                     <label className={style.label}>
                         <input type="radio" name="order" value="All" id="None" defaultChecked  className={style.button_17}/>  All

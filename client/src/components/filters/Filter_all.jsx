@@ -74,7 +74,7 @@ export default function Filter({ setter }) {
             {marked === true ? 
                 <div>
                     <div className={style.Select_filter}>
-                        <h2> Order by: </h2> 
+                        <h2 className={style.searchBy}> Order by: </h2> 
                         <div className={style.box}>
                          <select onChange={(e)=> handleSelect(e.target.value)} className={style.styling}>
                             <option defaultValue>Name </option>

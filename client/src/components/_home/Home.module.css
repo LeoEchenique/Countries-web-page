@@ -50,8 +50,10 @@
   font-size: 32px;
   margin-top: 80px;
 }
-
-
+.noData{
+  color: rgb(240, 231, 231);
+  font-size: 32px;
+}
 .button_17{
         margin-top: 60px;
         align-items: center;

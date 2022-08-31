@@ -142,7 +142,7 @@ export default function Home() {
                   </>
                   :
                   select === "Activities" && !activityByFilter.length ?
-                     <p>No activites... YET!</p> 
+                     <p className={style.noData}>No activites... YET!</p> 
                   :
                   allActivities.length && !error ?
                      <>
@@ -160,7 +160,7 @@ export default function Home() {
                               {pages(actualStorage)}
                               <Pagination CountriesPP={CountriesPP} totalPosts={actualStorage} paginate={paginate} />
                         </>
-                        : <h1>Loading...</h1>}
+                        : <h1 className={style.noData}>Loading...</h1>}
                </div>
             </div>
       </div>

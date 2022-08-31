@@ -36,7 +36,7 @@ conn.sync({ force: true }).then(() => {
         if (e.capital === undefined) e.capital = "This country don't have a Capital!";
         if (Array.isArray(e.capital)) e.capital = e.capital[0]
         if (e.independent === true) e.independent = "An independent State";
-        if (e.independent === false) e.independent = "not an independent State"
+        if (e.independent === false) e.independent = "Not an independent State"
         await Country.create({
           Id: e.cca3,
           Name: e.name.common,
