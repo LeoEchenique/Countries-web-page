@@ -106,7 +106,7 @@ export default function Home() {
                      <button name="search" className={style.button_17} onClick={() => handleSearch()}>Search!</button>
                      </div>
                   <div className={style.start_DIVbutton}>
-              {( select === "All") && currentPage === 1 ? null : <button onClick={handleMenu} className={`${style.back_home}, ${style.button_17}`}>Clean filters!</button>}
+              {( select === "All") && currentPage === 1 ? null : <button onClick={handleMenu} className={`${style.back_home} ${style.button_17}`}>Clean filters!</button>}
 
                </div>
                </div>

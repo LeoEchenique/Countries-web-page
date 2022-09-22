@@ -114,9 +114,9 @@
     padding: 30px;
   }
 
-/*   @media screen and (max-width: 800px) {
-     .Card_container{
-      outline: 2px solid blue;
-      height: fit-content;
-     }
-  } */
+   @media screen and (max-width: 800px) {
+  .back_home{
+    
+    margin-top: 6rem;
+  }
+  } 

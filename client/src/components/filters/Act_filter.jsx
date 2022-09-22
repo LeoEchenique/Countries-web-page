@@ -3,7 +3,8 @@ import React from "react";
 import { useState } from "react";
 import { orderCountries, getSortFront} from "../../actions/actions";
 import { useDispatch, useSelector } from "react-redux"
-import style from "../filters/Filter_all.module.css"
+/* import style from "../filters/Filter_all.module.css" */
+import style from "./Act_filter.module.css"
 
 /* filtred no tiene nada entonces renderiza allCountries */
 export default function FilterAct({setter}) {
@@ -22,7 +23,7 @@ export default function FilterAct({setter}) {
            
            
                 <div>
-                     <h2 className={style.orderBy}> Order by: </h2> 
+                     <h2 className={style.h2_order}> Order by: </h2> 
                 <div onChange={(e) => handleChange(e.target.value)}>
                     <label className={style.label}>
                         <input type="radio" name="order" value="All" id="None" defaultChecked  className={style.button_17}/>  All
