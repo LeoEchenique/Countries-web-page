@@ -10,7 +10,6 @@
 
 .search_bar{
     
-
     height: 4vh;
     display: flex;
     justify-content:center;
@@ -35,6 +34,7 @@
     color: #3f506d;
      margin-right: 7px; 
      margin-top: 60px;
+     padding-left: 0.5rem;
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
@@ -110,9 +110,13 @@
     margin-bottom: 2%;
   }
   
-
-
-  
   .box select option {
     padding: 30px;
   }
+
+/*   @media screen and (max-width: 800px) {
+     .Card_container{
+      outline: 2px solid blue;
+      height: fit-content;
+     }
+  } */

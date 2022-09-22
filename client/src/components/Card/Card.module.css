@@ -50,3 +50,10 @@
 .acts{
 outline: 2px solid red;
 }
+
+@media screen and (max-width: 800px) {
+    .Container{
+     outline: 2px solid blue;
+     height: max-content;
+    }
+ }
